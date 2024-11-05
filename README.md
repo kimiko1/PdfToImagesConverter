@@ -107,3 +107,12 @@ else:
 - pdf2image
 - Pillow
 - poppler-utils (required for pdf2image to work)
+
+You can install the required libraries with:
+```
+pip install pdf2image pillow
+```
+For Linux users, you may need to install Poppler:
+```
+sudo apt-get install poppler-utils
+```
