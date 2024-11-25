@@ -5,7 +5,7 @@ import time
 def convert_pdf_to_images(pdf_path):
     # Extraire le nom du fichier sans l'extension pour nommer le dossier de sortie
     base_filename = os.path.splitext(os.path.basename(pdf_path))[0]
-    output_folder = f"converted_images_{base_filename}"
+    output_folder = f"{base_filename}"
     
     # Créer le dossier de sortie
     os.makedirs(output_folder, exist_ok=True)
@@ -17,7 +17,7 @@ def convert_pdf_to_images(pdf_path):
         
         # Convertir le PDF en une liste d'images
         print(f"Conversion du fichier PDF : {pdf_path}")
-        images = convert_from_path(pdf_path, dpi=50, fmt="png")
+        images = convert_from_path(pdf_path, dpi=200, fmt="png") # dpi max = 500
         print(f"Nombre d'images converties : {len(images)}")
 
         # Sauvegarder chaque image avec un nom de fichier formaté avec 3 chiffres
