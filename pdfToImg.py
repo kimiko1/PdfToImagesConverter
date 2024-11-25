@@ -17,7 +17,7 @@ def convert_pdf_to_images(pdf_path):
         
         # Convertir le PDF en une liste d'images
         print(f"Conversion du fichier PDF : {pdf_path}")
-        images = convert_from_path(pdf_path, dpi=200, fmt="png") # dpi max = 500
+        images = convert_from_path(pdf_path, dpi=500, fmt="png") # dpi max = 500
         print(f"Nombre d'images converties : {len(images)}")
 
         # Sauvegarder chaque image avec un nom de fichier formaté avec 3 chiffres
