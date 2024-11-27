@@ -22,7 +22,7 @@ def convert_pdf_to_images(pdf_path):
         print(colored(f"Conversion du fichier PDF : {pdf_path}", "cyan"))
 
         # Convertir le PDF en images avec une résolution DPI de 500
-        images = convert_from_path(pdf_path, dpi=10, fmt="png")
+        images = convert_from_path(pdf_path, dpi=400, fmt="png")
         print(colored(f"Nombre d'images converties : {len(images)}", "yellow"))
 
         # Sauvegarder chaque image dans le dossier de sortie
